@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/styles.css">
     <title>Play Now!!!</title>
 </head>
 <body>
@@ -11,19 +12,19 @@
     <main>
         <div>
             <!-- Tela Inicial -->
-            <div id="telaInicial">
-                <div>
-                    <img src="./images/question.png" alt="question">
-                    <img src="./images/question.png" alt="question">
-                    <img src="./images/question.png" alt="question">
+            <div class="container" id="telaInicial">
+                <div class="box__img">
+                    <img class="img--question" src="./images/question.png" alt="question">
+                    <img class="img--question" src="./images/question.png" alt="question">
+                    <img class="img--question" src="./images/question.png" alt="question">
                 </div>
-                <input type="text" id="nome" placeholder="Digite seu nome aqui :)">
-                <button id="btnJogar">I N I C I A R</button>
+                <input type="text" id="nome" placeholder="Digite seu nome aqui :)" class="input--name clickable">
+                <button id="btnJogar" class="btn--jogar clickable">I N I C I A R</button>
             </div>
             <!-- Fim Tela Inicial -->
 
             <!-- Tela Jogo -->
-            <div id="telaJogo">
+            <div class="hide" id="telaJogo">
                
                     <div>
                         <p>Pontos: <span id="pontuacao">0</span></p>
@@ -41,7 +42,7 @@
                     <!-- Fim Tela Jogo -->
 
             <!-- Tela Winner - Looser -->
-            <div id="winLooser">
+            <div class="hide" id="winLooser">
                 <img src="./images/looser.jpg" alt="winner-looser">
             </div>
             <!-- Fim Tela - Winner - Looser -->
