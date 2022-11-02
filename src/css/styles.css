@@ -9,6 +9,10 @@
     display: none;
 }
 
+.show{
+    display:block;
+}
+
 .container{
     width:60%;
     margin: 0 auto;
@@ -33,10 +37,14 @@
 }
 
 .clickable{
-    width:50%;
-    margin: 0.5rem auto;
+    width:65%;
+    margin: 0.7rem auto;
     padding:0.5rem;
     text-align: center;
+}
+
+.btn--jogar{
+    cursor:pointer;
 }
 
 @media(max-width:869px){
