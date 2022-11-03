@@ -11,6 +11,9 @@
 <body>
     <header></header>
     <main>
+        <div class="boxUser">
+            <span id="user"></span>
+        </div>
         <div>
             <!-- Tela Inicial -->
             <div class="container" id="telaInicial">
@@ -27,17 +30,19 @@
             <!-- Tela Jogo -->
             <div class="hide" id="telaJogo">
                
+                <div class="container">
                     <div>
                         <p>Pontos: <span id="pontuacao">0</span></p>
                         <p>Resultado Anterior: <span id="pontuacao">1 1 1</span></p>
                     </div>
-                    <div>
-                            <img src="./images/question.png" alt="question">
-                            <img src="./images/question.png" alt="question">
-                            <img src="./images/question.png" alt="question">    
+                    <div class="box__img">
+                            <img src="./images/question.png" alt="question" class="img--question">
+                            <img src="./images/question.png" alt="question" class="img--question">
+                            <img src="./images/question.png" alt="question" class="img--question">    
                      </div>
 
-                   <button id="jogar">J O G A R</button>
+                   <button id="jogar" class="btn--jogar clickable">J O G A R</button>
+                </div>
                
             </div>
                     <!-- Fim Tela Jogo -->
