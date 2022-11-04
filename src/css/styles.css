@@ -22,10 +22,16 @@
     text-align: center;
 }
 
-.box__img{
+.box__content{
     display:flex;
     justify-content: space-around;
     margin: 2rem;
+}
+
+.box__content--text {
+    display:flex;
+    justify-content: space-between;
+    margin: 1rem;
 }
 
 .img--question{
@@ -36,6 +42,16 @@
     border: 1px solid #000;
 }
 
+.text{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.text--mini {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
 .clickable{
     width:65%;
     margin: 0.7rem auto;
@@ -48,7 +64,7 @@
 }
 
 @media(max-width:869px){
-    .box__img {
+    .box__content {
         flex-direction: column;
         justify-content: center;
         align-items: center;
