@@ -35,7 +35,7 @@
 }
 
 .img--question{
-    /* width: 33%; */
+    min-width: 33%;
     height: 15rem;
     margin:1.5rem;
     padding:1.5rem;

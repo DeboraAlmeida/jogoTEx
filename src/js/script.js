@@ -16,7 +16,7 @@ let lastResult = [1,1,1]
 
 //*****ALTERANDO DOM COM VARIÁVEIS*****
 
-resultado.innerText = lastResult
+resultado.innerText = "1 1 1"
 
 
 //*****BOTÕES*****
@@ -35,7 +35,7 @@ btnPlay.addEventListener('click', ()=>{
     lastResult = thisResult
     imgBack()
     sorteio()
-    resultado.innerHTML =  lastResult
+    resultado.innerHTML =  lastResult.replace(/,/g, " ")
     console.log(lastResult)
 })
 
@@ -51,7 +51,7 @@ const sorteio = ()=>{
             e.target.src=`./images/number_${numbers[index]}.png`
         })
     })  
-    thisResult = numbers
+    thisResult = numbers.toString()
 }
 const imgBack = ()=>{
     let imgs = document.querySelectorAll('#numbers img')
