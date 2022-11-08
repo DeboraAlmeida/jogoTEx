@@ -6,12 +6,14 @@ const pageGame  = document.querySelector('#telaJogo')
 const campo = document.querySelector('#nome');
 const btnPlay = document.querySelector('#jogar')
 const resultado = document.querySelector('#result')
+let points = document.querySelector('#pontuacao')
 
 
 //*****VARIÁVEIS*****
 
 let thisResult = [1,1,1]
 let lastResult = [1,1,1]
+let ponto = 0
 
 
 //*****ALTERANDO DOM COM VARIÁVEIS*****
@@ -33,10 +35,14 @@ btn.addEventListener("click", () => {
 //Armazena resultado do último jogo e reseta as img de ? quando clicado novamente
 btnPlay.addEventListener('click', ()=>{
     lastResult = thisResult
+    keepResult = lastResult
+    resultado.innerHTML =  lastResult.toString().replace(/,/g, " ")
     imgBack()
     sorteio()
-    resultado.innerHTML =  lastResult.replace(/,/g, " ")
-    console.log(lastResult)
+    lastResult = thisResult
+    pontuacao(lastResult, keepResult)
+    
+    
 })
 
 
@@ -51,13 +57,20 @@ const sorteio = ()=>{
             e.target.src=`./images/number_${numbers[index]}.png`
         })
     })  
-    thisResult = numbers.toString()
+    thisResult = numbers
 }
 const imgBack = ()=>{
     let imgs = document.querySelectorAll('#numbers img')
     imgs.forEach((elem) =>{
         elem.setAttribute("src", "./images/question.png")
     })
+}
+
+function pontuacao (arr1, arr2){
+    if(arr1[0] === arr1[1] && arr1[1] === arr1[2] || arr1[0] === arr2[0] && arr1[1] === arr2[1] && arr1[2] === arr2[2]){
+        ponto +=1
+    }
+    points.innerText=ponto
 }
 
 
