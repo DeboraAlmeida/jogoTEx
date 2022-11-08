@@ -6,7 +6,7 @@ const pageGame  = document.querySelector('#telaJogo')
 const campo = document.querySelector('#nome');
 const btnPlay = document.querySelector('#jogar')
 const resultado = document.querySelector('#result')
-let points = document.querySelector('#pontuacao')
+const points = document.querySelector('#pontuacao')
 
 
 //*****VARIÁVEIS*****
@@ -28,20 +28,14 @@ btn.addEventListener("click", () => {
     localStorage.setItem('user', campo.value)
     page.setAttribute("class", "hide")
     pageGame.classList.add("show")  
-    document.querySelector('#user').innerHTML = `Olá <b>${localStorage.getItem('user', campo.value)}</b>, boa sorte!`  
+    document.querySelector('#user').innerHTML = `Olá <b>${localStorage.getItem('user', campo.value)}</b>, boa sorte!`
+    play()  
 })
 
 //Sorteia os números, permite click nas img
 //Armazena resultado do último jogo e reseta as img de ? quando clicado novamente
 btnPlay.addEventListener('click', ()=>{
-    lastResult = thisResult
-    keepResult = lastResult
-    resultado.innerHTML =  lastResult.toString().replace(/,/g, " ")
-    imgBack()
-    sorteio()
-    lastResult = thisResult
-    pontuacao(lastResult, keepResult)
-    
+    play()
     
 })
 
@@ -69,8 +63,20 @@ const imgBack = ()=>{
 function pontuacao (arr1, arr2){
     if(arr1[0] === arr1[1] && arr1[1] === arr1[2] || arr1[0] === arr2[0] && arr1[1] === arr2[1] && arr1[2] === arr2[2]){
         ponto +=1
+    } else if ((arr1[0] === arr1[1] && arr1[1] === arr1[2]) && (arr1[0] === arr2[0] && arr1[1] === arr2[1] && arr1[2] === arr2[2])) {
+        ponto += 2
     }
     points.innerText=ponto
+}
+
+const play = ()=>{
+    lastResult = thisResult
+    keepResult = lastResult
+    resultado.innerHTML =  lastResult.toString().replace(/,/g, " ")
+    imgBack()
+    sorteio()
+    lastResult = thisResult
+    pontuacao(lastResult, keepResult)
 }
 
 
