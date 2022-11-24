@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,11 @@
     <script src="/src/js/script.js" async></script>
     <title>Play Now!!!</title>
 </head>
+
 <body>
     <header></header>
     <main>
+        <button onclick="document.querySelector('body').classList.toggle('dark')" class="dark-mode">:D</button>
         <div class="boxUser">
             <span id="user" class="text--mini"></span>
         </div>
@@ -29,23 +32,23 @@
 
             <!-- Tela Jogo -->
             <div class="hide" id="telaJogo">
-               
+
                 <div class="container">
                     <div class="box__content--text">
                         <p class="text">Pontos: <span id="pontuacao" class="text">0</span></p>
                         <p class="text">Resultado Anterior: <span id="result" class="text">1 1 1</span></p>
                     </div>
                     <div id="numbers" class="box__content">
-                            <img src="./images/question.png" alt="question" class="img--question">
-                            <img src="./images/question.png" alt="question" class="img--question">
-                            <img src="./images/question.png" alt="question" class="img--question">    
-                     </div>
+                        <img src="./images/question.png" alt="question" class="img--question">
+                        <img src="./images/question.png" alt="question" class="img--question">
+                        <img src="./images/question.png" alt="question" class="img--question">
+                    </div>
 
-                   <button id="jogar" class="btn--jogar clickable">J O G A R</button>
+                    <button id="jogar" class="btn--jogar clickable">J O G A R</button>
                 </div>
-               
+
             </div>
-                    <!-- Fim Tela Jogo -->
+            <!-- Fim Tela Jogo -->
 
             <!-- Tela Winner - Looser -->
             <div class="hide" id="winLooser">
@@ -55,4 +58,5 @@
         </div>
     </main>
 </body>
+
 </html>
